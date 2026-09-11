@@ -1,0 +1,20 @@
+{
+  "source": "Original saved shopping collection workbook",
+  "data_rows": 120,
+  "fields": [
+    "상품명",
+    "상세페이지링크",
+    "가격",
+    "판매처",
+    "배송정보"
+  ],
+  "field_count": 5,
+  "missing_values": {
+    "상품명": 0,
+    "상세페이지링크": 0,
+    "가격": 0,
+    "판매처": 0,
+    "배송정보": 0
+  },
+  "interpretation": "Stored rows, not verified unique products. No live recrawl performed."
+}
