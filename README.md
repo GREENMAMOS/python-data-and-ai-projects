@@ -1,15 +1,30 @@
-# Python Data Collection & AI-assisted Projects
+# Data & AI Projects
 
-Python을 활용한 웹 데이터 수집·전처리와 간단한 웹 인터랙션 구현 경험을 정리한 개인 프로젝트 모음입니다. Python 데이터 수집과 HTML·CSS·JavaScript 기반 화면 구현을 구분해 소개합니다.
+반도체·제조 데이터 분석을 중심으로, Python을 활용한 데이터 수집·전처리와 AI-assisted 개발 프로젝트를 정리한 포트폴리오입니다.
 
-## 프로젝트
+주요 관심 분야는 제조 데이터 분석이며, 그 외 프로젝트는 데이터 수집·웹 구현·생성형 AI 활용 역량을 보조적으로 보여줍니다.
 
-| 프로젝트 | 해결하려던 문제 | 주요 기술 | 결과와 근거 |
+## Featured Project
+
+### [반도체 공정 데이터 분석](https://github.com/GREENMAMOS/semiconductor-process-data-analysis)
+
+공정 조건과 계측 결과를 비교·분석하며 반도체 제조 데이터 해석 역량을 정리한 프로젝트입니다.
+
+- Python 기반 데이터 전처리
+- 공정 변수 비교 및 시각화
+- 통계적 데이터 해석
+- 제조·공정 데이터 분석 관점의 결과 정리
+
+---
+
+## Supporting Projects
+
+| 프로젝트 | 목적 | 주요 기술 | 보여주는 역량 |
 |---|---|---|---|
-| [RISS 논문 정보 수집](projects/riss/README.md) | 검색 목록과 상세페이지의 정보를 함께 비교하기 | Python, requests, BeautifulSoup | 요청 파라미터 구성, 항목명 기반 추출, 누락 주제어 처리 |
-| [쇼핑몰 상품 데이터 수집](projects/shopping/README.md) | 스크롤로 추가되는 상품을 표 형태로 정리하기 | Selenium, BeautifulSoup, pandas | 원본 엑셀 120행·5개 항목, 가격 문자열 정리 |
-| [생일 축하 미니게임](projects/birthday-game/README.md) | 축하 메시지를 선택형 콘텐츠로 전달하기 | HTML, CSS, JavaScript, 생성형 AI | 선택 상태, 3개 엔딩, 반응형 화면, 다시 시작 |
-| [반도체 공정 데이터 분석](https://github.com/GREENMAMOS/semiconductor-process-data-analysis) | 공정 조건과 계측 결과를 비교하기 | Python, Excel, 통계·시각화 | 별도 저장소에서 공정 데이터 해석 역량 소개 |
+| [사이별 MBTI (SHYSTAR)](https://shystar.greenmamos.workers.dev) | 친구들의 MBTI 관계를 지도처럼 시각화하고 궁합 점수를 제공하는 웹서비스 | TypeScript, React, Cloudflare Workers, D1, 생성형 AI | 서비스 기획, 풀스택 구현, DB 연동, 배포 |
+| [RISS 논문 정보 수집](projects/riss/README.md) | 검색 목록과 상세페이지의 정보를 함께 비교하기 | Python, requests, BeautifulSoup | 요청 파라미터 구성, 데이터 수집·파싱, 누락값 처리 |
+| [쇼핑몰 상품 데이터 수집](projects/shopping/README.md) | 동적으로 로딩되는 상품 데이터를 표 형태로 정리하기 | Selenium, BeautifulSoup, pandas | 동적 웹 수집, 데이터 정제, 표 구조화 |
+| [생일 축하 미니게임](projects/birthday-game/README.md) | 선택형 콘텐츠를 웹 인터랙션으로 구현하기 | HTML, CSS, JavaScript, 생성형 AI | UI 구현, 상태 분기, 반응형 화면 |
 
 ## AI 활용 범위
 
