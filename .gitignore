@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Selenium / browser automation artifacts
+*.log
+geckodriver.log
+chromedriver.log
+
+# personal working notes
+이어하기.md
+작업현황.md
+진행상태.md
