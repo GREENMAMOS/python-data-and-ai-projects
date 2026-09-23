@@ -2,17 +2,30 @@
 
 ### Materials × Data × AI
 
-**공정과 소자를 이해하고, 데이터를 해석하며, AI로 문제 해결의 범위를 넓혀가는 엔지니어**
+**신소재공학을 기반으로 반도체 공정 데이터를 분석하고, 새로운 기술 흐름에 맞춰 AI 자동화 도구와 웹서비스를 직접 구현·검증하며 AX 역량을 쌓아온 엔지니어**
 
-신소재공학을 기반으로 반도체 공정·소자를 이해하고,
-Python을 활용해 데이터를 수집·전처리·분석하는 프로젝트를 수행했습니다.
+Python으로 데이터 수집과 반복 작업을 자동화했습니다.
 
-또한 생성형 AI와 자동화 도구를 적극적으로 활용해
-아이디어를 실제 서비스와 업무 흐름으로 구현하며 새로운 기술을 빠르게 학습하고 적용하고 있습니다.
+웹서비스 개발에서는 화면·서버 API·데이터베이스·테스트 결제를 연결했습니다.
+각 프로젝트에서 직접 정한 요구사항과 설계 판단, 실행 결과와 검증 근거를 함께 정리했습니다.
 
 📄 **[Portfolio PDF ↗](./Jiwon_Yoo_Portfolio.pdf)**
 
 ---
+
+## 결과 요약
+
+
+| 프로젝트 | 구현·분석 결과 | 기술적 판단 | 바로 보기 |
+|---|---|---|---|
+| **반도체 공정 데이터 분석** | 공정 실행 **25건**, wafer **49개 위치** 분석, 후속 **9개 Split** 설계 | 조건 번호 기반 연결, 결측 보존, 유효 측정 수를 고려한 후보 선정 | [코드·분석](https://github.com/GREENMAMOS/semiconductor-process-data-analysis) |
+| **SHYSTAR · 사이별** | 관계지도·공유·D1 저장·테스트 결제 구현, **2,048개 보고서 조합** 검사 | 서버 금액 검증, 구매자 권한 분리, 중복 승인 방지 | [서비스](https://shystar.greenmamos.workers.dev/) · [코드](https://github.com/GREENMAMOS/SHYSTAR) · [분석 샘플](https://shystar.greenmamos.workers.dev/analysis-sample) |
+| **카카오톡 음악 동기화** | 음악 링크 추출·중복 제거·신규 곡 반영 자동화, 기존 실행에서 **77건 추출** 확인 | 메시지 형식에 독립적인 URL 추출, 상태 파일 기반 이력 비교, 부분 실패 분리 | [코드·실행 방법](https://github.com/GREENMAMOS/kakao-to-ytmusic) |
+
+25건은 공정 실행 기록 수이며 서로 다른 Recipe 수가 아닙니다. 2,048개는 보고서 입력 조합 수입니다. 77건은 기존 실행 기록이며 시간 단축과 실제 추가 성공률은 별도로 측정하지 않았습니다.
+
+
+[검증 기록](docs/verification.md)
 
 ## Featured Project
 
@@ -27,13 +40,20 @@ Python을 활용해 데이터를 수집·전처리·분석하는 프로젝트를
 
 - Si2H6 센서 데이터의 ramp-up 구간과 안정 구간 분리
 - Run별 평균·표준편차를 이용한 안정 구간 비교
-- 25개 공정 조건의 박막 두께·Range·STD·Uniformity 분석
+- Pre 반복 기록을 포함한 25개 공정 실행 기록의 박막 두께·Range·STD·Uniformity 분석
 - Si2H6 유량, RF Power, 온도, 시간에 따른 결과 변화 비교
 - 공정 Recipe와 wafer 계측 데이터를 조건별로 연결
 - 49-point wafer map 기반 위치별 평균 절대편차 분석
 - 목표 두께와 균일도를 고려한 후보 조건 비교
 - 변경 Target에 대한 9개 Split 후속 평가안 설계
 - 분석 결과와 함께 실험 검증이 필요한 범위를 명시
+
+#### 결과와 판단 근거
+
+- 반복되는 WF 번호 대신 조건 번호로 공정 Recipe와 계측 데이터를 연결했습니다.
+- 두께 결측 9개를 0으로 대체하지 않고, 유효 측정값과 측정 개수를 기준으로 분석했습니다.
+- 초기 규격 후보로 선정한 Run23은 유효 측정 45/49개 위치 기준이며, 결측 위치의 재계측이 필요합니다.
+- 9개 Split 후속 평가안을 설계했습니다. 제안 조건의 예상 두께는 가정에 따른 계산값입니다.
 
 #### Tech
 
@@ -54,6 +74,7 @@ Python을 활용해 데이터를 수집·전처리·분석하는 프로젝트를
 |---|---|---|---|
 | 🔬 [Semiconductor Process Data Analysis](https://github.com/GREENMAMOS/semiconductor-process-data-analysis) | 증착 공정 조건·계측 데이터 분석 및 후속 평가 설계 | Python, pandas, Matplotlib, Excel | 제조 데이터 분석, 공정 해석, 실험 조건 설계 |
 | ⭐ [사이별 · SHYSTAR ↗](https://github.com/GREENMAMOS/SHYSTAR) | 관계 데이터를 시각화하는 웹서비스 구현·배포 | React, TypeScript, Workers, D1 | 서비스 기획, API·DB 연동, AI 보조 개발, 배포 |
+| 🎵 [카카오톡 음악 링크 자동화](https://github.com/GREENMAMOS/kakao-to-ytmusic) | 대화 파일의 음악 링크를 수집해 YouTube Music에 반영 | Python, ytmusicapi, 정규표현식 | URL 파싱, 이력 관리, API 연동, 예외 처리 |
 | 🎮 [ShieldDive](projects/shielddive/README.md) | 5인 팀 액션게임 제작 및 작업관리 자동화 | Unity, C#, ChatGPT, Apps Script | 프로젝트 기획, 협업, UI·사운드 구현, 업무 자동화 |
 | 📚 [RISS 논문 정보 수집](projects/riss/README.md) | 목록·상세페이지 정보를 수집해 데이터셋 구축 | Python, requests, BeautifulSoup | 데이터 수집·파싱, 누락값 처리 |
 | 🛒 [쇼핑몰 상품 데이터 수집](projects/shopping/README.md) | 동적 웹페이지 상품 데이터를 구조화 | Python, Selenium, BeautifulSoup, pandas | 브라우저 자동화, 데이터 정제·구조화 |
@@ -63,72 +84,31 @@ Python을 활용해 데이터를 수집·전처리·분석하는 프로젝트를
 
 ## ⭐ 사이별 MBTI · SHYSTAR
 
-친구들의 MBTI 관계를 별자리처럼 시각화하고,  
-친구별 관계와 궁합 점수를 확인할 수 있도록 만든 웹서비스입니다.
+🔗 [공개 서비스](https://shystar.greenmamos.workers.dev/) · [분석 샘플](https://shystar.greenmamos.workers.dev/analysis-sample) · [코드](https://github.com/GREENMAMOS/SHYSTAR)
 
-🔗 **Live Service**  
-https://shystar.greenmamos.workers.dev
+MBTI 관계지도 생성·공유부터 관계별 분석 콘텐츠, D1 데이터 저장, 토스페이먼츠 테스트 결제까지 연결한 개인 풀스택 웹서비스입니다. 서버의 주문·금액·상태 검증, 구매자 접근 권한 분리, 중복 승인 방지를 구현하고 2,048개 보고서 구성을 검사하는 자동화 테스트를 작성했습니다. 생성형 AI는 코드 초안·디버깅에 활용했고, 기능·흐름·검증 시나리오는 직접 설계했습니다.
 
-🔗 **Repository**  
-https://github.com/GREENMAMOS/SHYSTAR
+구현 내용, 설계 판단, 검증 범위와 한계는 [프로젝트 README](https://github.com/GREENMAMOS/SHYSTAR)에서 자세히 볼 수 있습니다.
 
-### 구현 내용
+---
 
-- 별명·MBTI 기반 관계 지도 생성
-- 친구 추가 및 관계 데이터 저장
-- MBTI 기반 케미 점수 계산 및 순위 표시
-- 관계 데이터를 별자리 형태로 시각화
-- 공유 가능한 관계 지도 URL 제공
-- Cloudflare D1 기반 데이터 저장
-- Cloudflare Workers 환경에 실제 서비스 배포
-- 모바일·데스크톱 반응형 UI 구현
+## 🎵 카카오톡 음악 링크 → YouTube Music 자동화
 
-### AI 활용
+🔗 [코드와 실행 방법](https://github.com/GREENMAMOS/kakao-to-ytmusic)
 
-서비스의 기능과 사용자 흐름은 직접 설계한 뒤,  
-생성형 AI를 **코드 초안 작성·구현 방법 탐색·디버깅·코드 리뷰**에 활용했습니다.
-AI가 생성한 결과를 실행하고 오류를 확인하면서 필요/요구사항에 맞게 수정·검증했습니다.
+카카오톡 대화 내보내기 파일에서 음악 링크를 추출해 YouTube Music 플레이리스트에 반영하는 Python CLI 도구입니다. 메시지 형식에 의존하지 않는 URL 추출과 상태 파일 기반 이력 비교로 신규 곡만 반영하도록 구현했으며, 기존 실행 기록에서 영상 링크 77건 추출을 확인했습니다.
+
+설계 판단과 검증 범위는 [프로젝트 README](https://github.com/GREENMAMOS/kakao-to-ytmusic)에서 자세히 볼 수 있습니다.
 
 ---
 
 ## 🎮 ShieldDive
 
-🔗 **[Play Game ↗](https://coleyoung-game.github.io/Web_ShieldDive/)**  
-📁 **[Project Details](projects/shielddive/README.md)**
+🔗 [Play Game ↗](https://coleyoung-game.github.io/Web_ShieldDive/) · [Project Details](projects/shielddive/README.md)
 
-5인 팀으로 제작한 픽셀 액션게임 프로젝트입니다.
+5인 팀 픽셀 액션게임에 기획팀장 겸 보조개발로 참여해 게임 규칙·플레이 흐름 기획, 일정 관리, 메인 화면·사운드 구현을 담당했습니다. 팀의 작업 등록·진행 확인·마감 공유 흐름은 GPT로 요청을 구조화해 Google Apps Script·Sheets·Discord Webhook과 연결하는 방식으로 자동화했습니다. 핵심 플레이 로직은 다른 팀원이 담당했습니다.
 
-방패를 이용해 장애물을 공격·회피하며
-목표 지점까지 내려가는 게임을 기획하고 제작했습니다.
-
-### 담당 역할
-
-- 5인 팀 기획팀장 및 보조개발
-- 게임 규칙과 전체 플레이 흐름 기획
-- 제작 일정 및 팀 진행 상황 관리
-- 메인 화면 구현
-- 게임 사운드 구현
-- 팀 작업 등록·상태 확인·마감 공유 자동화 구성
-
-핵심 플레이 로직과 일부 플레이 화면은 다른 팀원이 담당했으며,
-저는 **기획·일정 관리와 메인 화면·사운드 개발**을 중심으로 참여했습니다.
-
-### Team Workflow Automation
-
-프로젝트 진행 중 반복되는
-**작업 등록 → 진행 상태 확인 → 마감 안내** 흐름을 자동화 대상으로 정했습니다.
-
-```text
-자연어 작업 요청
-        ↓
-GPT로 작업 정보 구조화
-        ↓
-Google Apps Script
-        ↓
-Google Sheets 기록
-        ↓
-Discord Webhook 알림
-```
+담당 역할과 자동화 구조는 [프로젝트 상세](projects/shielddive/README.md)에서 자세히 볼 수 있습니다.
 
 ---
 
@@ -162,20 +142,17 @@ Discord Webhook 알림
 
 ## Personalized Birthday Game (AI-assisted Development)
 📁 [Project Details](projects/birthday-game/README.md)
-🔗 Live Demo ↗
+🔗 [Live Demo ↗](https://iridescent-croquembouche-2e6aa8.netlify.app/)
 
-생성형 AI를 결과 생성 도구가 아니라  
-**개발과 학습 과정의 보조 도구**로 활용했습니다.
+선택 상태에 따라 세 가지 엔딩으로 이어지는 HTML·CSS·JavaScript를 사용한 미니게임입니다.
 
-- 코드 초안 작성
-- 오류 원인 탐색 및 디버깅
-- 새로운 라이브러리·API 사용법 학습
-- 코드 구조 개선 아이디어 탐색
-- 웹 UI 구현 보조
-- 구현 결과 리뷰 및 수정
+- 선택값 저장과 엔딩 분기
+- 다시 시작할 때 상태 초기화
+- PC·모바일 화면에 맞춘 반응형 배치
+- 엔딩 결과 복사 기능
 
-프로젝트의 목적과 기능 요구사항은 직접 정하고,  
-AI가 제안한 코드는 실제 실행과 검증을 거쳐 필요한 부분을 수정했습니다.
+이야기와 기능 요구사항을 직접 정하고, AI가 제안한 UI·코드 초안을 수정하며 완성했습니다.
+공개본은 개인 이름·사진·대화를 일반 이야기로 대체했습니다.
 
 ---
 
