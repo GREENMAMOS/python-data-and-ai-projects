@@ -1,5 +1,8 @@
 # ShieldDive | 게임 제작과 팀 작업 관리 자동화
 
+![Uploading image.png…]()
+
+
 **5인 팀의 기획과 일정 관리를 맡고, 메인 화면·사운드 구현과 작업 관리 자동화에 참여했습니다.**
 
 [게임 플레이](https://coleyoung-game.github.io/Web_ShieldDive/) · [전체 포트폴리오](../../README.md)
